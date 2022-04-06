@@ -2,7 +2,7 @@
 
 @import "var.scss";
 
-@mixin clear-default-trash{
+@mixin clear-default-trash {
   outline: none;
   border: none;
   background-color: transparent;
@@ -51,12 +51,14 @@ body {
   align-items: center;
   user-select: none;
   cursor: pointer;
-  &-wide{
+
+  &-wide {
     @extend .submit-button;
     width: 230px;
     background: #2ea0f8;
   }
-  &-spinning{
+
+  &-spinning {
     @extend .submit-button-wide;
     width: 300px;
     margin-top: 7%;
@@ -70,10 +72,10 @@ body {
 
 @keyframes spin {
   from {
-    transform:rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
-    transform:rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -102,20 +104,20 @@ body {
   text-align: center;
   justify-content: space-around;
   cursor: pointer;
-}
 
-.navbar > div {
-  width: 200px;
-}
+  div {
+    width: 200px;
+  }
 
-.navbar > a {
-  width: 200px;
-  color: inherit;
-  @include clear-default-trash;
+  a {
+    width: 200px;
+    color: inherit;
+    @include clear-default-trash;
+  }
 }
 
 @media (max-width: 575.98px) {
-  .input-block{
+  .input-block {
     margin-top: 30%;
   }
   .input {
@@ -129,7 +131,7 @@ body {
     height: 53%;
   }
 
-  .submit-button-spinning{
+  .submit-button-spinning {
     margin-top: 20%;
   }
 }

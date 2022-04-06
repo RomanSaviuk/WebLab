@@ -2,7 +2,7 @@
 
 @import "var.scss";
 
-@mixin clear-default-trash{
+@mixin clear-default-trash {
   outline: none;
   border: none;
   background-color: transparent;
@@ -67,6 +67,7 @@ a {
   color: inherit;
   @include clear-default-trash;
 }
+
 @media (max-width: 576px) {
   .mainbox {
     margin-top: 20%;

@@ -93,12 +93,10 @@ body {
   justify-content: space-around;
   cursor: pointer;
 }
-
-.navbar > div {
+.navbar div {
   width: 200px;
 }
-
-.navbar > a {
+.navbar a {
   width: 200px;
   color: inherit;
   outline: none;
