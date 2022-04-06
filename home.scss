@@ -1,52 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 
+@import "var.scss";
+
+@mixin clear-default-trash{
+  outline: none;
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+  text-decoration: none;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
-  background: #83E4C1;
+  background: $qq_green;
+  color: white;
+  font-size: 20px;
 }
 
-row {
-  margin: unset !important;
-}
-
-input_background {
+.input {
   display: flex;
-  align-items: center;
-  background: #FFFFFF;
-  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
-  border-radius: 12px;
-  width: 100%;
-  height: 100%;
-}
-
-.input_background_background {
-  display: flex;
-  background: #CECECE;
-  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+  background: $almost_white;
+  box-shadow: $shadow;
   border-radius: 15px;
-  height: 65px;
-  width: 80%;
+  height: 45px;
+  width: 45%;
   margin-left: auto;
   margin-right: auto;
   padding: 8px;
 }
 
-.form-control {
-  outline: none !important;
-  border: none !important;
-  background-color: transparent !important;
-  box-shadow: none !important;
+.form {
+  @include clear-default-trash;
   font-size: larger;
-  color: #858585;
+  color: $grey;
+  width: 100%;
 }
 
-.submit_button {
-  background-color: #EDB734;
+.submit-button {
+  background-color: $qq_orange;
   margin: 15px;
   width: 130px;
-  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+  box-shadow: $shadow;
   border-radius: 12px;
-  color: white !important;
+  color: $almost_white !important;
   height: 45px;
   text-align: center;
   padding: 1px;
@@ -55,155 +51,85 @@ input_background {
   align-items: center;
   user-select: none;
   cursor: pointer;
+  &-wide{
+    @extend .submit-button;
+    width: 230px;
+    background: #2ea0f8;
+  }
+  &-spinning{
+    @extend .submit-button-wide;
+    width: 300px;
+    margin-top: 7%;
+    background: #32ee7f;
+    animation-name: spin;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
 }
 
-.submit_button > a {
-  color: white !important;
+@keyframes spin {
+  from {
+    transform:rotate(0deg);
+  }
+  to {
+    transform:rotate(360deg);
+  }
 }
 
-.input_id_block {
+.input-block {
   display: flex;
   align-items: center;
-  margin-top: 33%;
+  margin-top: 10%;
   flex-direction: column;
 }
 
-.about_block {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  align-content: flex-start;
-  margin-top: 25%;
-  margin-left: 5%;
-  margin-right: 5%;
-  flex-direction: column;
-  font-weight: 800;
-  line-height: 85px;
-  color: white;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.about_block > h1 {
-  font-size: 4em;
-}
-
-.about_block > h2 {
-  font-size: 2em;
-}
-
-.home_background {
+.home-background {
   position: absolute;
-  left: 0px;
-  bottom: 0px;
+  left: 0;
+  bottom: 0;
   width: 45%;
   height: 88%;
-  background-color: #ACEED6;
-  border-radius: 0% 50% 50% 0%;
-  box-shadow: inset 0px 4px 4px rgb(0 0 0 / 25%);
+  background-color: $qq_green_light;
+  border-radius: 0 50% 50% 0;
+  box-shadow: inset $shadow;
   z-index: -1;
 }
 
-a, a:hover {
-  text-decoration: none;
-  background-color: transparent;
+.navbar {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+.navbar > div {
+  width: 200px;
+}
+
+.navbar > a {
+  width: 200px;
+  color: inherit;
+  @include clear-default-trash;
 }
 
 @media (max-width: 575.98px) {
-  .about_block {
-    text-align: center;
-    line-height: unset;
-    margin-top: 16%;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
+  .input-block{
+    margin-top: 30%;
+  }
+  .input {
+    width: 70%;
+    height: 40px;
   }
 
-  .about_block > h1 {
-    font-size: 200%;
-  }
-
-  .about_block > h2 {
-    visibility:hidden;
-    font-size: 136%;
-  }
-
-  .input_id_block {
-    margin-top: 0;
-  }
-
-  .input_background_background {
-    width: 98%;
-    height: 62px;
-  }
-
-  .home_background {
+  .home-background {
     bottom: 33%;
     width: 98%;
     height: 53%;
   }
-}
 
-.navbar-nav {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: space-between;
-}
-
-.container-fluid {
-  padding: 0px;
-}
-
-.navbar-toggler-icon {
-  background-image: url("/public/toggler-icon.png");
-}
-
-.navbar-toggler {
-  border: none;
-  box-shadow: none;
-  outline: none;
-  margin-left: 85%;
-  margin-top: 1%;
-}
-
-.signup_button {
-  display: flex;
-  min-width: 130px;
-  height: 50px;
-  text-align: center;
-  background: #FFFFFF;
-  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
-  border-radius: 18px;
-  color: #555555;
-  width: fit-content;
-  align-items: center;
-  justify-content: center;
-}
-
-.navNotCollapsed {
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.navCollapsed {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-.navCollapsed > a {
-  margin: 0;
-  margin-bottom: 5px;
-  margin-top: 5px;
-  margin-right: 0 !important;
-}
-
-a, a:hover, a:focus-visible {
-  border:none;
-  outline: none;
-  color: white;
-  text-decoration: none;
-  background-color: transparent;
-  font-size: 20px;
+  .submit-button-spinning{
+    margin-top: 20%;
+  }
 }

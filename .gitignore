@@ -11,3 +11,5 @@ node_modules/to-regex-range/README.md
 .idea/modules.xml
 package.json
 home.css.map
+var.css.map
+login.css.map

@@ -3,35 +3,25 @@
 <head>
     <link rel="stylesheet" href="home.css">
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Home</title>
 </head>
 <body>
 <header>
 <!--    <img src="/logo.svg" alt="" height="60px"/>-->
-    <div class="navCollapsed">
-        <div to="/createqueue">Create Queue</div>
-        <div to="/myqueues">My Queues</div>
-        <div to="/about">About</div>
+    <div class="navbar">
+        <div>Search</div>
+        <a href="login.html">Account</a>
+        <div>About</div>
     </div>
-<!--    <NavbarToggler onClick={this.toggleNavbar}/>-->
 </header>
-
-<div class="home_background"></div>
-
-<div class="input_id_block">
-    <div class="input_background_background">
-        <div class="input_background">
-            <Input type="text" placeholder="ID..." />
-        </div>
+<div class="home-background"></div>
+<div class="input-block">
+    <div class="input">
+            <input class="form" type="text" placeholder="ID...">
     </div>
-    <div class="submit_button">
-        Join
-    </div>
-</div>
-
-<div class="about_block">
-    <h1>Stop wasting time in queues</h1>
-    <h2>use smart queue service today</h2>
+    <div class="submit-button">Join</div>
+    <div class="submit-button-wide">Join, but wider</div>
+    <div class="submit-button-spinning">Join, but spinning</div>
 </div>
 </body>
 </html>
