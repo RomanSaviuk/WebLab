@@ -48,11 +48,12 @@ body {
 }
 
 .login-btn {
+  @include clear-default-trash;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: $qq_orange;
-  height: 45px;
+  height: 50px;
   padding: 5px;
   border-radius: 15px;
   box-shadow: $shadow;
@@ -61,11 +62,28 @@ body {
   font-weight: 100;
   width: 45%;
   margin: 25px;
+  cursor: pointer;
+
+  &:hover {
+    @extend .login-btn;
+    width: 48%;
+    height: 55px;
+  }
 }
 
 a {
   color: inherit;
   @include clear-default-trash;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: flex-start;
+  text-align: center;
+  justify-content: space-around;
+  user-select: none;
+  flex-direction: column;
+  width: 20%;
 }
 
 @media (max-width: 576px) {

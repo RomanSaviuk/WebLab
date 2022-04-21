@@ -6,14 +6,22 @@
     <title>Log In</title>
 </head>
 <body>
-<div class="mainbox">
+<header>
+    <a class="navbar-logo" href="index.html">
+        <img src="public/logo.png" height="70px">
+    </a>
+</header>
+
+<form class="mainbox" id="login-form">
     <div class="inputbox">
-        <input class="form" type="text" placeholder="E-mail">
+        <input class="form" name="email" id="username-field" type="email" placeholder="E-mail">
     </div>
     <div class="inputbox">
-        <input class="form" type="password" placeholder="Password">
+        <input class="form" name="password" id="password-field" type="password" placeholder="Password">
     </div>
-    <a href="index.html" class="login-btn">LogIn</a>
-</div>
+    <input type="submit" id="login-form-submit" class="login-btn" value="Login">
+</form>
+
+<script src="js/login.js"></script>
 </body>
 </html>
