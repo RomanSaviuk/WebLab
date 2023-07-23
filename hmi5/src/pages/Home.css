@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+.Home {
+    display: flex;
+    justify-content: center;
+}
+
+.Home-Buttons {
+    display: flex;
+    margin-top: 200px;
+}
+
+.Home-Buttons > a {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+}
+
+.Home-Button {
+    height: 221px;
+    width: 221px;
+    background: #E8A2A2;
+    border-radius: 20px;
+    margin: 30px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+    color: #393939;
+}
+
+.Home-Button > img {
+    width: 50%;
+    max-height: 50%;
+    margin: 20px;
+}

@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+
+.homeBody{
+    background: #fff url(/public/background.png) left top/cover no-repeat local;
+}
+
+.hardwareBody{
+    background: #ffffff;
+}
+
+.hardwareBackground{
+    width: 308px;
+    height: 100vh;
+    background: #B84A4A;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.Nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.backButton{
+    width: 45px;
+    margin-left: 10px;
+}
+
+.Logo {
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 49px;
+    color: #FFFFFF;
+    margin-left: 30px;
+}

@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+.Hardware {
+    display: flex
+}
+
+.Hardware-Menu-Background {
+    display: flex;
+    width: 308px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Hardware-Menu-Title {
+    display: flex;
+    width: 285px;
+    height: 58px;
+    background: #E8A2A2;
+    margin: 10px;
+    border-radius: 15px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+    color: #393939;
+    justify-content: center;
+    align-items: center;
+}
+
+.Hardware-Menu {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+.Hardware-Menu > a {
+    text-decoration: none;
+}
+
+.Hardware-Menu-Button {
+    width: 129px;
+    height: 129px;
+    background: #F4F4F4;
+    box-shadow: -4px 4px 5px rgb(0 0 0 / 25%);
+    border-radius: 16px;
+    margin: 10px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #393939;
+}
+
+.Hardware-Menu-Button > img {
+    width: 50%;
+    max-height: 50%;
+    margin: 10px;
+}
